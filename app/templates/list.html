@@ -3,8 +3,11 @@
 
         <map on-create="mapCreated(map)"></map>
 
+        <button class="button button-full button-positive icon ion-pinpoint" ng-click="centerOnMe()"> Center on Me</button>
+
+
         <div class="list card" >
-            <a class="item" ng-repeat="item in list">{{item}}</a>
+            <a class="item" ng-repeat="item in list" ng-click="setCenter(item.lat,item.long)">{{item.name}}</a>
         </div>
 
     </ion-content>
