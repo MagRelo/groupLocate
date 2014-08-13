@@ -1,6 +1,10 @@
 'use strict';
 
-angular.module('GroupLocate', ['ionic', 'GroupLocate.controllers', 'GroupLocate.directives'])
+angular.module('GroupLocate',
+  ['ionic',
+    'GroupLocate.controllers',
+    'GroupLocate.directives',
+    'GroupLocate.beaconService'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -42,7 +46,7 @@ angular.module('GroupLocate', ['ionic', 'GroupLocate.controllers', 'GroupLocate.
         views: {
           'create-tab': {
             templateUrl: "templates/create.html",
-            controller: 'CreateTabCtrl'
+            controller: 'CreateBeaconCtrl'
           }
         }
       })
@@ -51,7 +55,7 @@ angular.module('GroupLocate', ['ionic', 'GroupLocate.controllers', 'GroupLocate.
         url: "/createBeacon",
         views: {
           'create-tab': {
-            templateUrl: "templates/createBeacon.html",
+            templateUrl: "../templates/create.html",
             controller: 'CreateBeaconCtrl'
           }
         }

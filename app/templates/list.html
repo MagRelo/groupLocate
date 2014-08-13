@@ -1,10 +1,15 @@
 <ion-view title="List">
-    <ion-content>
+
+
+    <ion-content class="positive-bg">
 
         <map on-create="mapCreated(map)"></map>
 
-        <button class="button button-full button-positive icon ion-pinpoint" ng-click="centerOnMe()"> Center on Me</button>
-
+        <div class="text-center padding">
+            <button class="button button-assertive button-small icon ion-share" ng-click="centerOnMe()"> Show Active</button>
+            <button class="button button-assertive button-small icon ion-pinpoint" ng-click="centerOnMe()"> Center on Me</button>
+            <button class="button button-assertive button-small icon ion-disc" ng-click="centerOnMe()"> Show All</button>
+        </div>
 
         <div class="list card" >
             <a class="item" ng-repeat="item in list" ng-click="setCenter(item.lat,item.long)">{{item.name}}</a>

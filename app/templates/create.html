@@ -1,20 +1,68 @@
 <ion-view title="Create">
-    <ion-content>
+    <ion-content class="positive-bg">
+        <div class="list list-inset">
 
+            <!--//Name and Desc-->
+            <div class="item item-divider assertive">
+                Set Name and Description
+            </div>
 
-        <div class="list card">
+            <label class="item item-input">
+                <span class="input-label">Name:</span>
+                <input type="text" ng-model="newBeacon.name">
+            </label>
 
-            <a href="#/createBeacon" class="item item-icon-left">
-                <i class="icon ion-wifi rotate"></i>
-                Create a new Beacon
-            </a>
+            <label class="item item-input">
+                <span class="input-label">Desc:</span>
+                <input type="text" ng-model="newBeacon.desc">
+            </label>
 
-            <a href="#/createGroup" class="item item-icon-left">
-                <i class="icon ion-ios7-people"></i>
-                Create a new Group
-            </a>
+            <!--//Date and Time-->
+            <div class="item item-divider assertive">
+                Set Date and Time
+            </div>
+
+            <label class="item item-input">
+                <span class="input-label">Date:</span>
+                <input type="date" ng-model="newBeacon.startDate">
+            </label>
+
+            <!--<label class="item item-input">-->
+                <!--<span class="input-label">start time:</span>-->
+                <!--<input type="time" ng-model="newBeacon.startTime">-->
+            <!--</label>-->
+
+            <label class="item item-input item-select">
+                <span class="input-label">Duration:</span>
+                <select ng-model="newBeacon.duration" ng-options="option.min as option.display for option in durationOptions"></select>
+            </label>
+
+            <!--//Location-->
+            <div class="item item-divider assertive">
+                Set Location
+            </div>
+
+            <div class="item item-input-inset">
+
+                <label class="item-input-wrapper">
+                    <input type="text" placeholder="search Google">
+                </label>
+
+                <button class="button button-positive button-small">
+                    Search
+                </button>
+            </div>
+
 
         </div>
+
+        <div class="text-center">
+            <button class="button button-assertive">
+                <span class="icon ion-wifi"></span>
+                create beacon
+            </button>
+        </div>
+
 
     </ion-content>
 </ion-view>

@@ -3,8 +3,9 @@
 angular.module('GroupLocate.controllers', [])
 
 
-  .controller('ListTabCtrl', function($scope, $ionicLoading){
+  .controller('ListTabCtrl', function($scope, $ionicLoading, beacons){
 
+    //map functions
     $scope.mapCreated = function(map) {
       $scope.map = map;
     };
@@ -32,13 +33,8 @@ angular.module('GroupLocate.controllers', [])
     };
 
 
-
-    $scope.list = [
-      {name: 'NYC', lat:'40.77', long:'-73.98'},
-      {name: 'Vegas', lat:'35.59083403679774', long:'-105.22072448730468'},
-      {name: 'Seattle', lat:'47.59721093820445', long:'-122.31860620117186'},
-      {name: 'Miami', lat:'25.78909119411881', long:'-80.20172241210935'}
-    ];
+    //get list of beacons
+    $scope.list = beacons.list;
 
   })
 
@@ -50,11 +46,28 @@ angular.module('GroupLocate.controllers', [])
 
   })
 
-  .controller('CreateBeaconCtrl', function($scope){
+  .controller('CreateBeaconCtrl', function($scope, beacons){
 
-    $scope.list = [
-      'add', 'delete', 'edit'
+    //defaults
+    $scope.newBeacon = {
+      startDate: new Date().toISOString().split("T")[0],
+      duration: 60
+    };
+
+    $scope.durationOptions = [
+      {display: '15 min', min: '15'},
+      {display: '30 min', min: '30'},
+      {display: '45 min', min: 45},
+      {display: '1 hour', min: 60},
+      {display: '2 hours', min: 120},
+      {display: '3 hours', min: 180}
     ];
+
+    $scope.add = function(newBeacon){
+
+      beacons.add(newBeacon);
+
+    };
 
   })
 
