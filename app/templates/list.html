@@ -5,13 +5,19 @@
 
         <map on-create="mapCreated(map)"></map>
 
-        <div class="text-center padding">
-            <button class="button button-assertive button-small icon ion-share" ng-click="centerOnMe()"> Show Active</button>
-            <button class="button button-assertive button-small icon ion-pinpoint" ng-click="centerOnMe()"> Center on Me</button>
-            <button class="button button-assertive button-small icon ion-disc" ng-click="centerOnMe()"> Show All</button>
-        </div>
+        <!--<div class="text-center padding">-->
+            <!--<button class="button button-assertive button-small icon ion-share" ng-click="centerOnMe()"> Show Active</button>-->
+            <!--<button class="button button-assertive button-small icon ion-pinpoint" ng-click="centerOnMe()"> Center on Me</button>-->
+            <!--<button class="button button-assertive button-small icon ion-disc" ng-click="centerOnMe()"> Show All</button>-->
+        <!--</div>-->
+
 
         <div class="list card" >
+            <!--//Location-->
+            <div class="item item-divider assertive">
+                Active beacons
+            </div>
+
             <a class="item" ng-repeat="item in list" ng-click="setCenter(item.lat,item.long)">{{item.name}}</a>
         </div>
 

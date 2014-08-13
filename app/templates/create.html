@@ -4,7 +4,7 @@
 
             <!--//Name and Desc-->
             <div class="item item-divider assertive">
-                Set Name and Description
+                Name and Description
             </div>
 
             <label class="item item-input">
@@ -12,14 +12,14 @@
                 <input type="text" ng-model="newBeacon.name">
             </label>
 
-            <label class="item item-input">
-                <span class="input-label">Desc:</span>
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Description:</span>
                 <input type="text" ng-model="newBeacon.desc">
             </label>
 
             <!--//Date and Time-->
             <div class="item item-divider assertive">
-                Set Date and Time
+                Date and Time
             </div>
 
             <label class="item item-input">
@@ -39,13 +39,19 @@
 
             <!--//Location-->
             <div class="item item-divider assertive">
-                Set Location
+                Location
             </div>
+
+            <label class="item item-input" ng-show="newBeacon.location">
+                <span class="input-label">Location:</span>
+                <input type="text" ng-model="newBeacon.location" disabled>
+            </label>
+
 
             <div class="item item-input-inset">
 
                 <label class="item-input-wrapper">
-                    <input type="text" placeholder="search Google">
+                    <input type="text" placeholder="search for address or place">
                 </label>
 
                 <button class="button button-positive button-small">
