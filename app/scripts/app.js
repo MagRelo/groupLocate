@@ -41,16 +41,6 @@ angular.module('GroupLocate',
         }
       })
 
-      .state('tabs.create', {
-        url: "/create",
-        views: {
-          'create-tab': {
-            templateUrl: "templates/create.html",
-            controller: 'CreateBeaconCtrl'
-          }
-        }
-      })
-
       .state('tabs.createBeacon', {
         url: "/createBeacon",
         views: {
@@ -61,22 +51,22 @@ angular.module('GroupLocate',
         }
       })
 
-      .state('tabs.createGroup', {
-        url: "/createGroup",
+      .state('tabs.viewGroups', {
+        url: "/groups",
         views: {
-          'create-tab': {
-            templateUrl: "templates/createGroup.html",
-            controller: 'CreateGroupCtrl'
+          'view-groups': {
+            templateUrl: "templates/viewGroups.html",
+            controller: 'GroupCtrl'
           }
         }
       })
 
-      .state('tabs.map', {
-        url: "/map",
+      .state('tabs.settings', {
+        url: "/settings",
         views: {
-          'map-tab': {
-            templateUrl: "templates/map.html",
-            controller: 'MapCtrl'
+          'settings': {
+            templateUrl: "templates/settings.html",
+            controller: 'SettingCtrl'
           }
         }
       })

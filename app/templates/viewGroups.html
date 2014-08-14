@@ -1,0 +1,61 @@
+<ion-view title="View Groups">
+    <ion-content class="positive-bg">
+
+        <ul class="list card">
+            <div class="item item-divider assertive">
+                Show beacons from my groups
+            </div>
+            <li class="item item-toggle" ng-repeat="group in groups">
+                {{group.name}}
+                <label class="toggle toggle-balanced">
+
+                    <input type="checkbox" ng-model="group.display">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+
+                </label>
+            </li>
+        </ul>
+
+        <div class="list card">
+            <div class="item item-divider assertive">
+                Join a group
+            </div>
+
+            <div class="item item-input-inset">
+
+                <label class="item-input-wrapper">
+                    <input type="text" placeholder="search for groups">
+                </label>
+
+                <button class="button button-positive button-small">
+                    Search
+                </button>
+            </div>
+
+        </div>
+
+
+        <div class="list card">
+            <div class="item item-divider assertive">
+                Create a group
+            </div>
+
+            <div class="item item-input-inset">
+
+                <label class="item-input-wrapper">
+                    <input type="text" placeholder="group name">
+                </label>
+
+                <button class="button button-assertive button-small">
+                    Create
+                </button>
+            </div>
+
+        </div>
+
+
+
+    </ion-content>
+</ion-view>

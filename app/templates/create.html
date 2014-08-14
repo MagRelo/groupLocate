@@ -1,45 +1,10 @@
 <ion-view title="Create">
     <ion-content class="positive-bg">
-        <div class="list list-inset">
-
-            <!--//Name and Desc-->
-            <div class="item item-divider assertive">
-                Name and Description
-            </div>
-
-            <label class="item item-input">
-                <span class="input-label">Name:</span>
-                <input type="text" ng-model="newBeacon.name">
-            </label>
-
-            <label class="item item-input item-stacked-label">
-                <span class="input-label">Description:</span>
-                <input type="text" ng-model="newBeacon.desc">
-            </label>
-
-            <!--//Date and Time-->
-            <div class="item item-divider assertive">
-                Date and Time
-            </div>
-
-            <label class="item item-input">
-                <span class="input-label">Date:</span>
-                <input type="date" ng-model="newBeacon.startDate">
-            </label>
-
-            <!--<label class="item item-input">-->
-                <!--<span class="input-label">start time:</span>-->
-                <!--<input type="time" ng-model="newBeacon.startTime">-->
-            <!--</label>-->
-
-            <label class="item item-input item-select">
-                <span class="input-label">Duration:</span>
-                <select ng-model="newBeacon.duration" ng-options="option.min as option.display for option in durationOptions"></select>
-            </label>
+        <div class="list card">
 
             <!--//Location-->
             <div class="item item-divider assertive">
-                Location
+                location
             </div>
 
             <label class="item item-input" ng-show="newBeacon.location">
@@ -58,6 +23,43 @@
                     Search
                 </button>
             </div>
+
+            <!--//Name and Desc-->
+            <div class="item item-divider assertive">
+                name and description
+            </div>
+
+            <label class="item item-input">
+                <span class="input-label">Name:</span>
+                <input type="text" ng-model="newBeacon.name">
+            </label>
+
+            <label class="item item-input item-stacked-label">
+                <span class="input-label">Description:</span>
+                <input type="text" ng-model="newBeacon.desc">
+            </label>
+
+            <!--//Date and Time-->
+            <div class="item item-divider assertive">
+                date and time
+            </div>
+
+            <label class="item item-input">
+                <span class="input-label">Date:</span>
+                <input type="date" ng-model="newBeacon.startDate">
+            </label>
+
+            <label class="item item-input">
+                <span class="input-label">start time:</span>
+                <input type="time" ng-model="newBeacon.startTime">
+            </label>
+
+            <label class="item item-input item-select">
+                <span class="input-label">Duration:</span>
+                <select ng-model="newBeacon.duration" ng-options="option.min as option.display for option in durationOptions"></select>
+            </label>
+
+
 
 
         </div>

@@ -38,10 +38,11 @@ angular.module('GroupLocate.controllers', [])
 
   })
 
-  .controller('CreateTabCtrl', function($scope){
+  .controller('SettingCtrl', function($scope){
 
-    $scope.list = [
-      'add', 'delete', 'edit'
+    $scope.notifications = [
+      {name: 'new beacon', enabled: true},
+      {name: 'new group member', enabled: true}
     ];
 
   })
@@ -71,10 +72,12 @@ angular.module('GroupLocate.controllers', [])
 
   })
 
-  .controller('CreateGroupCtrl', function($scope){
+  .controller('GroupCtrl', function($scope){
 
-    $scope.list = [
-      'add', 'delete', 'edit'
+    $scope.groups = [
+      {name: 'asdf', members:[], display: true},
+      {name: 'basd', members:[], display: true},
+      {name: 'coiu', members:[], display: false}
     ];
 
   })

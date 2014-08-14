@@ -1,0 +1,29 @@
+<ion-view title="Settings">
+    <ion-content class="positive-bg">
+
+        <div class="list card">
+            <div class="item item-divider assertive">
+                Account settings
+            </div>
+        </div>
+
+        <div class="list card">
+            <div class="item item-divider assertive">
+                Notifications
+            </div>
+
+            <div class="item item-toggle" ng-repeat="item in notifications">
+                {{item.name}}
+                <label class="toggle toggle-balanced">
+
+                    <input type="checkbox" ng-model="item.enabled">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+
+                </label>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>
